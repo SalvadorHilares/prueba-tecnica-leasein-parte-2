@@ -5,7 +5,8 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - .:/var/www/html
+      - ./public:/var/www/html
+      - ./backend/api:/var/www/html/backend/api
     depends_on:
       - db
     environment:
@@ -30,7 +31,7 @@ services:
       MYSQL_DATABASE: formulario_contacto
     volumes:
       - db-data:/var/lib/mysql
-      - ./database.sql:/docker-entrypoint-initdb.d/database.sql
+      - ./database/database.sql:/docker-entrypoint-initdb.d/database.sql
     networks:
       - formulario-network
 

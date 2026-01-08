@@ -181,7 +181,7 @@ function resetForm() {
  */
 async function submitFormData(formData) {
     try {
-        const response = await fetch('api/submit.php', {
+        const response = await fetch('/backend/api/submit.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

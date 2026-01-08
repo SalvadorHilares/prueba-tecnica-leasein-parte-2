@@ -25,20 +25,24 @@ Proyecto de formulario de contacto con validación en JavaScript puro, backend P
 
 ```
 prueba-tecnica-leasein-parte-2/
-├── index.html              # Página principal con el formulario
-├── styles.css              # Estilos CSS responsive
-├── script.js               # Lógica de validación y envío
-├── database.sql            # Script SQL para crear la base de datos
-├── docker-compose.yml      # Configuración de Docker Compose
-├── Dockerfile              # Imagen Docker para despliegue
-├── install.sh              # Script de instalación (Linux/Mac)
-├── install.bat             # Script de instalación (Windows)
-├── api/
-│   ├── config.php         # Configuración de base de datos
-│   ├── config.example.php # Ejemplo de configuración
-│   ├── submit.php         # API para procesar el formulario
-│   └── test-connection.php # Script para probar la conexión DB
-└── README.md              # Este archivo
+├── public/                      # Frontend
+│   ├── index.html               # Página principal con el formulario
+│   └── assets/
+│       ├── css/
+│       │   └── styles.css       # Estilos CSS responsive
+│       └── js/
+│           └── script.js        # Lógica de validación y envío
+├── backend/
+│   └── api/
+│       ├── config.php           # Configuración de base de datos
+│       ├── config.example.php   # Ejemplo de configuración
+│       ├── submit.php           # API para procesar el formulario
+│       └── test-connection.php  # Script para probar la conexión DB
+├── database/
+│   └── database.sql             # Script SQL para crear la base de datos
+├── docker-compose.yml           # Configuración de Docker Compose
+├── Dockerfile                   # Imagen Docker para despliegue
+└── README.md                    # Este archivo
 ```
 
 ### Instalación Manual
