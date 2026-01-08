@@ -90,35 +90,6 @@ Puedes ver los contactos guardados en phpMyAdmin (http://localhost:8080) o ejecu
 docker exec -it formulario-db mysql -u root -prootpassword -e "SELECT * FROM formulario_contacto.contactos ORDER BY fecha_envio DESC;"
 ```
 
-## 🛑 Detener los Contenedores
-
-```bash
-docker-compose down
-```
-
-Para detener y eliminar los contenedores y volúmenes:
-
-```bash
-docker-compose down -v
-```
-
-## 🔄 Reiniciar los Contenedores
-
-```bash
-docker-compose restart
-```
-
-## 📊 Ver Logs
-
-```bash
-# Ver logs de todos los servicios
-docker-compose logs -f
-
-# Ver logs de un servicio específico
-docker-compose logs -f web
-docker-compose logs -f db
-```
-
 ## 📊 Base de Datos
 
 ### Tabla: contactos
