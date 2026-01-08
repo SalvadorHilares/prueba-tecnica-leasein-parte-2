@@ -1,0 +1,43 @@
+# Archivos de configuración sensibles
+api/config.php
+
+# Variables de entorno
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+logs/
+error_log
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos temporales
+tmp/
+temp/
+*.tmp
+
+# Node modules (si se usa Node.js para desarrollo)
+node_modules/
+
+# Archivos de backup
+*.bak
+*.backup
+*.old
+
+# Archivos de PHP
+vendor/
+composer.phar
+composer.lock
+

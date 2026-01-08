@@ -1,0 +1,30 @@
+{
+  "name": "formulario-contacto-elementor",
+  "version": "1.0.0",
+  "description": "Formulario de contacto personalizado para Elementor con validación JavaScript y backend PHP",
+  "main": "index.html",
+  "scripts": {
+    "start": "php -S localhost:8000",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tu-usuario/prueba-tecnica-leasein-parte-2.git"
+  },
+  "keywords": [
+    "formulario",
+    "contacto",
+    "elementor",
+    "javascript",
+    "php",
+    "mysql",
+    "responsive"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tu-usuario/prueba-tecnica-leasein-parte-2/issues"
+  },
+  "homepage": "https://github.com/tu-usuario/prueba-tecnica-leasein-parte-2#readme"
+}
+

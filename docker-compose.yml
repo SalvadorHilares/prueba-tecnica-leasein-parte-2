@@ -1,0 +1,57 @@
+services:
+  web:
+    image: php:7.4-apache
+    container_name: formulario-web
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASS=rootpassword
+      - DB_NAME=formulario_contacto
+    command: >
+      bash -c "docker-php-ext-install mysqli pdo pdo_mysql
+      && a2enmod rewrite
+      && apache2-foreground"
+    networks:
+      - formulario-network
+
+  db:
+    image: mysql:8.0
+    container_name: formulario-db
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: formulario_contacto
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./database.sql:/docker-entrypoint-initdb.d/database.sql
+    networks:
+      - formulario-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: formulario-phpmyadmin
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: rootpassword
+    depends_on:
+      - db
+    networks:
+      - formulario-network
+
+volumes:
+  db-data:
+
+networks:
+  formulario-network:
+    driver: bridge
+
